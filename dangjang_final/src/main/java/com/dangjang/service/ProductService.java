@@ -36,7 +36,7 @@ public class ProductService {
 
     // 신상품 리스트 가져오기
     public List<ProductMapperDTO> getNewProductList(String pg, String listType) {
-        long date = 15;
+        long date = 150;
         int endPage = Integer.parseInt(pg) * 20;
         int startPage = endPage - 19;
         log.info("----------------신상품 전체 리스트");
@@ -64,7 +64,7 @@ public class ProductService {
 
     // 신상품 페이징
     public NewProductPaging newArrPaging(String pg){
-        long date = 15;
+        long date = 150;
         int totalRecords = productMapper.getTotalRecords(date);
         newProductPaging.setCurrentPage(Integer.parseInt(pg));
         newProductPaging.setRecordsPerPage(20);
@@ -76,7 +76,7 @@ public class ProductService {
 
     // 신상품 총 개수
     public int getNewProductCount(){
-        long date = 15;
+        long date = 150;
         return productMapper.getTotalRecords(date);
     }
 
@@ -114,7 +114,7 @@ public class ProductService {
 
     // 카테고리 상품 리스트 가져오기
     public List<ProductMapperDTO> getProductList(String pg, String categoryCode, String subCategoryNum, String listType) {
-        long date = 15;
+        long date = 150;
         int endPage = Integer.parseInt(pg) * 20;
         int startPage = endPage - 19;
 
